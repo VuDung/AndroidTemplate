@@ -21,6 +21,7 @@ android {
 
 dependencies {
     compile project(':common')
+
     testCompile 'junit:junit:4.12'
     //rest
     compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
