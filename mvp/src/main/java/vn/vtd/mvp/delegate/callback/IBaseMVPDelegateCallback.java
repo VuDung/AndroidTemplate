@@ -15,8 +15,10 @@ public interface IBaseMVPDelegateCallback<V extends MVPView, P extends MVPPresen
      *
      * @return the created presenter instance
      */
+
     @NonNull
     public P createPresenter();
+
 
     /**
      * Get the presenter. If null is returned, then a internally a new presenter instance gets
