@@ -32,10 +32,12 @@ public class App extends Application implements IApplication{
     }
 
     private void initInjector(){
-        appComponent = DaggerAppComponent.builder()
-                .appModule(new AppModule(this))
-                .androidUtilsModule(new AndroidUtilsModule(this))
-                .build();
+        if(appComponent == null) {
+            appComponent = DaggerAppComponent.builder()
+                    .appModule(new AppModule(this))
+                    .androidUtilsModule(new AndroidUtilsModule(this))
+                    .build();
+        }
         visitorComponent = appComponent.plus(new VisitorModule());
     }
 
